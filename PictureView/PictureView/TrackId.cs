@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PictureView
 {
@@ -14,13 +15,22 @@ namespace PictureView
         string strPictureView = "*.jpg*";
         string strProductXML = "*.csv*";
 
+        public void clearAllLog()
+        {
+            frmMn.comboBoxTrFailure.Items.Clear();
+            frmMn.comboBoxTrFailure.Text = "";
+            frmMn.textBoxTrackId.Text = "";
+            frmMn.pictureBoxTrFailure.Image = Properties.Resources.Default;
+            
+        }
+
         FrmMain frmMn = FrmMain.getInstance();
         
         public bool getTrackIdPictureView()
         {
             try
             {
-                foreach (string folderName in Directory.GetDirectories(frmMn.textBoxDirectory.txt + "\\", ))
+                foreach (string folderName in Directory.GetDirectories(frmMn.textBoxTrackId.Text + "\\", ))
                 {
 
                 }

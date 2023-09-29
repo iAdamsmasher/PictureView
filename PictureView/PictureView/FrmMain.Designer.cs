@@ -34,6 +34,7 @@
             this.pictureBoxTrFailure = new System.Windows.Forms.PictureBox();
             this.comboBoxTrFailure = new System.Windows.Forms.ComboBox();
             this.buttonSearch = new System.Windows.Forms.Button();
+            this.textBoxDirectory = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTrFailure)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,9 +57,9 @@
             // pictureBoxTrFailure
             // 
             this.pictureBoxTrFailure.Image = global::PictureView.Properties.Resources.Default;
-            this.pictureBoxTrFailure.Location = new System.Drawing.Point(43, 150);
+            this.pictureBoxTrFailure.Location = new System.Drawing.Point(12, 150);
             this.pictureBoxTrFailure.Name = "pictureBoxTrFailure";
-            this.pictureBoxTrFailure.Size = new System.Drawing.Size(567, 400);
+            this.pictureBoxTrFailure.Size = new System.Drawing.Size(1031, 509);
             this.pictureBoxTrFailure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxTrFailure.TabIndex = 2;
             this.pictureBoxTrFailure.TabStop = false;
@@ -66,9 +67,9 @@
             // comboBoxTrFailure
             // 
             this.comboBoxTrFailure.FormattingEnabled = true;
-            this.comboBoxTrFailure.Location = new System.Drawing.Point(43, 102);
+            this.comboBoxTrFailure.Location = new System.Drawing.Point(12, 116);
             this.comboBoxTrFailure.Name = "comboBoxTrFailure";
-            this.comboBoxTrFailure.Size = new System.Drawing.Size(567, 28);
+            this.comboBoxTrFailure.Size = new System.Drawing.Size(771, 28);
             this.comboBoxTrFailure.TabIndex = 3;
             // 
             // buttonSearch
@@ -80,11 +81,20 @@
             this.buttonSearch.Text = "SEARCH";
             this.buttonSearch.UseVisualStyleBackColor = true;
             // 
+            // textBoxDirectory
+            // 
+            this.textBoxDirectory.Location = new System.Drawing.Point(572, 38);
+            this.textBoxDirectory.Name = "textBoxDirectory";
+            this.textBoxDirectory.Size = new System.Drawing.Size(428, 26);
+            this.textBoxDirectory.TabIndex = 5;
+            this.textBoxDirectory.Text = "C:\\CAMERA_FAIL_DATA\\BLEMISH";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1055, 671);
+            this.Controls.Add(this.textBoxDirectory);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.comboBoxTrFailure);
             this.Controls.Add(this.pictureBoxTrFailure);
@@ -100,12 +110,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBoxTrackId;
         private System.Windows.Forms.Label labelTrackId;
-        private System.Windows.Forms.PictureBox pictureBoxTrFailure;
-        private System.Windows.Forms.ComboBox comboBoxTrFailure;
-        private System.Windows.Forms.Button buttonSearch;
+        public System.Windows.Forms.TextBox textBoxTrackId;
+        public System.Windows.Forms.PictureBox pictureBoxTrFailure;
+        public System.Windows.Forms.ComboBox comboBoxTrFailure;
+        public System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.TextBox textBoxDirectory;
     }
 }
 

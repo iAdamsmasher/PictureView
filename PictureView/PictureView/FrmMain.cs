@@ -15,7 +15,7 @@ namespace PictureView
     {
         string strPictureViewErrorMsg = "Error to Load the Picture View";
         TrackId TrId;
-        private static FrmMain INSTANCEFrm = null;
+        public static FrmMain INSTANCEFrm = null;
 
         public FrmMain()
         {
@@ -32,7 +32,8 @@ namespace PictureView
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             TrId = new TrackId();
-            TrId.
+            TrackId.
+
         }
     }
 }
