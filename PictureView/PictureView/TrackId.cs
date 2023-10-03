@@ -15,7 +15,7 @@ namespace PictureView
         string strPictureView = "*.jpg*";
         string strProductXML = "*.csv*";
 
-        public void clearAllLog()
+        public void clearAll()
         {
             frmMn.comboBoxTrFailure.Items.Clear();
             frmMn.comboBoxTrFailure.Text = "";

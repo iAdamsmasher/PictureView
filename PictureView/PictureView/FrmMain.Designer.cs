@@ -35,6 +35,7 @@
             this.comboBoxTrFailure = new System.Windows.Forms.ComboBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxDirectory = new System.Windows.Forms.TextBox();
+            this.progressBarTrackId = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTrFailure)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,11 +90,19 @@
             this.textBoxDirectory.TabIndex = 5;
             this.textBoxDirectory.Text = "C:\\CAMERA_FAIL_DATA\\BLEMISH";
             // 
+            // progressBarTrackId
+            // 
+            this.progressBarTrackId.Location = new System.Drawing.Point(43, 70);
+            this.progressBarTrackId.Name = "progressBarTrackId";
+            this.progressBarTrackId.Size = new System.Drawing.Size(314, 10);
+            this.progressBarTrackId.TabIndex = 6;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1055, 671);
+            this.Controls.Add(this.progressBarTrackId);
             this.Controls.Add(this.textBoxDirectory);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.comboBoxTrFailure);
@@ -116,6 +125,7 @@
         public System.Windows.Forms.ComboBox comboBoxTrFailure;
         public System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.TextBox textBoxDirectory;
+        public System.Windows.Forms.ProgressBar progressBarTrackId;
     }
 }
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.ComponentModel;
 
 namespace PictureView
 {
@@ -29,10 +30,32 @@ namespace PictureView
                 INSTANCEFrm = new FrmMain();
             return INSTANCEFrm;
         }
-        private void buttonSearch_Click(object sender, EventArgs e)
+
+        public partial class FrmMain : Form
+        {
+           /* public Form1()
+            {
+                InitializeComponent();
+                backgroundWorker1.WorkerReportsProgress = true;
+                backgroundWorker1.WorkerSupportsCancellation = true;
+            }
+            */
+
+            private void buttonSearch_Click(object sender, EventArgs e)
         {
             TrId = new TrackId();
-            TrackId.
+            TrId.clearAll();
+            if (textBoxTrackId.TextLength != 10)
+            {
+                MessageBox.Show("TrackId Inválido", "TrackId - Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                progressBarTrackId.Maximum = 100;
+                progressBarTrackId.Step = 1;
+                progressBarTrackId.Value = 0;
+                backgroundWorker
+            }
 
         }
     }
