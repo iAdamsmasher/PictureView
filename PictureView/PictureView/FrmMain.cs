@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.ComponentModel;
 
 namespace PictureView
 {
@@ -30,33 +22,55 @@ namespace PictureView
                 INSTANCEFrm = new FrmMain();
             return INSTANCEFrm;
         }
-
-        public partial class FrmMain : Form
+        private void comboBoxTrFailure_SelectedIndexChanged(object sender, EventArgs e)
         {
-           /* public Form1()
-            {
-                InitializeComponent();
-                backgroundWorker1.WorkerReportsProgress = true;
-                backgroundWorker1.WorkerSupportsCancellation = true;
-            }
-            */
+            string pictureName = string.Empty;
+            pictureName = comboBoxTrFailure.SelectedItem.ToString();
 
-            private void buttonSearch_Click(object sender, EventArgs e)
+        }
+
+        private void buttonSearch_Click_1(object sender, EventArgs e)
         {
+            comboBoxTrFailure.Items.Clear();
+            defineProgressBar();
             TrId = new TrackId();
-            TrId.clearAll();
-            if (textBoxTrackId.TextLength != 10)
+            if (textBoxTrackId.Text.Length != 10)
             {
                 MessageBox.Show("TrackId Inválido", "TrackId - Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBoxTrackId.Text = "";
             }
             else
             {
-                progressBarTrackId.Maximum = 100;
-                progressBarTrackId.Step = 1;
-                progressBarTrackId.Value = 0;
-                backgroundWorker
+                TrId.getTrackIdPictureView(textBoxTrackId.Text);
+                textBoxTrackId.Text = "";
             }
+        }
+        public void progressBarUpDate(int value)
+        {
+            if (progressBarTrackId.Value == 100)
+            {
 
+            }
+            else
+                progressBarTrackId.Value += value;
+        }
+        public void defineProgressBar()
+        {
+            progressBarTrackId.Minimum = 0;
+            progressBarTrackId.Maximum = 100;
+            progressBarTrackId.Value = 0;
+        }
+        private void comboBoxTrFailure_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                pictureBoxTrFailure.Image = Image.FromFile(comboBoxTrFailure.Text);
+            }
+            catch
+            {
+                MessageBox.Show(strPictureViewErrorMsg);
+            }
         }
     }
 }
+

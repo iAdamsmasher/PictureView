@@ -36,6 +36,7 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxDirectory = new System.Windows.Forms.TextBox();
             this.progressBarTrackId = new System.Windows.Forms.ProgressBar();
+            this.labelPictureView = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTrFailure)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,15 +44,17 @@
             // 
             this.textBoxTrackId.Location = new System.Drawing.Point(43, 38);
             this.textBoxTrackId.Name = "textBoxTrackId";
-            this.textBoxTrackId.Size = new System.Drawing.Size(314, 26);
+            this.textBoxTrackId.Size = new System.Drawing.Size(148, 26);
             this.textBoxTrackId.TabIndex = 0;
             // 
             // labelTrackId
             // 
             this.labelTrackId.AutoSize = true;
+            this.labelTrackId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTrackId.ForeColor = System.Drawing.Color.Green;
             this.labelTrackId.Location = new System.Drawing.Point(43, 12);
             this.labelTrackId.Name = "labelTrackId";
-            this.labelTrackId.Size = new System.Drawing.Size(62, 20);
+            this.labelTrackId.Size = new System.Drawing.Size(77, 22);
             this.labelTrackId.TabIndex = 1;
             this.labelTrackId.Text = "TrackId";
             // 
@@ -60,7 +63,7 @@
             this.pictureBoxTrFailure.Image = global::PictureView.Properties.Resources.Default;
             this.pictureBoxTrFailure.Location = new System.Drawing.Point(12, 150);
             this.pictureBoxTrFailure.Name = "pictureBoxTrFailure";
-            this.pictureBoxTrFailure.Size = new System.Drawing.Size(1031, 509);
+            this.pictureBoxTrFailure.Size = new System.Drawing.Size(1398, 574);
             this.pictureBoxTrFailure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxTrFailure.TabIndex = 2;
             this.pictureBoxTrFailure.TabStop = false;
@@ -72,19 +75,21 @@
             this.comboBoxTrFailure.Name = "comboBoxTrFailure";
             this.comboBoxTrFailure.Size = new System.Drawing.Size(771, 28);
             this.comboBoxTrFailure.TabIndex = 3;
+            this.comboBoxTrFailure.SelectedIndexChanged += new System.EventHandler(this.comboBoxTrFailure_SelectedIndexChanged_1);
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(377, 38);
+            this.buttonSearch.Location = new System.Drawing.Point(210, 24);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(147, 41);
+            this.buttonSearch.Size = new System.Drawing.Size(103, 40);
             this.buttonSearch.TabIndex = 4;
             this.buttonSearch.Text = "SEARCH";
             this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click_1);
             // 
             // textBoxDirectory
             // 
-            this.textBoxDirectory.Location = new System.Drawing.Point(572, 38);
+            this.textBoxDirectory.Location = new System.Drawing.Point(806, 116);
             this.textBoxDirectory.Name = "textBoxDirectory";
             this.textBoxDirectory.Size = new System.Drawing.Size(428, 26);
             this.textBoxDirectory.TabIndex = 5;
@@ -92,16 +97,31 @@
             // 
             // progressBarTrackId
             // 
-            this.progressBarTrackId.Location = new System.Drawing.Point(43, 70);
+            this.progressBarTrackId.BackColor = System.Drawing.SystemColors.Highlight;
+            this.progressBarTrackId.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.progressBarTrackId.Location = new System.Drawing.Point(43, 74);
             this.progressBarTrackId.Name = "progressBarTrackId";
-            this.progressBarTrackId.Size = new System.Drawing.Size(314, 10);
+            this.progressBarTrackId.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.progressBarTrackId.Size = new System.Drawing.Size(366, 19);
             this.progressBarTrackId.TabIndex = 6;
+            // 
+            // labelPictureView
+            // 
+            this.labelPictureView.AutoSize = true;
+            this.labelPictureView.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPictureView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.labelPictureView.Location = new System.Drawing.Point(634, 13);
+            this.labelPictureView.Name = "labelPictureView";
+            this.labelPictureView.Size = new System.Drawing.Size(326, 61);
+            this.labelPictureView.TabIndex = 7;
+            this.labelPictureView.Text = "JOT Picture View";
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 671);
+            this.ClientSize = new System.Drawing.Size(1422, 742);
+            this.Controls.Add(this.labelPictureView);
             this.Controls.Add(this.progressBarTrackId);
             this.Controls.Add(this.textBoxDirectory);
             this.Controls.Add(this.buttonSearch);
@@ -109,6 +129,7 @@
             this.Controls.Add(this.pictureBoxTrFailure);
             this.Controls.Add(this.labelTrackId);
             this.Controls.Add(this.textBoxTrackId);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMain";
             this.Text = "PictureView";
@@ -124,8 +145,9 @@
         public System.Windows.Forms.PictureBox pictureBoxTrFailure;
         public System.Windows.Forms.ComboBox comboBoxTrFailure;
         public System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.TextBox textBoxDirectory;
         public System.Windows.Forms.ProgressBar progressBarTrackId;
+        public System.Windows.Forms.TextBox textBoxDirectory;
+        private System.Windows.Forms.Label labelPictureView;
     }
 }
 

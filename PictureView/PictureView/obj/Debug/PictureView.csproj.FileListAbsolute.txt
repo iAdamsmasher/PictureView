@@ -1,1 +1,8 @@
+C:\DevelopmentProjects\PictureView\PictureView\PictureView\obj\Debug\PictureView.FrmMain.resources
+C:\DevelopmentProjects\PictureView\PictureView\PictureView\obj\Debug\PictureView.Properties.Resources.resources
+C:\DevelopmentProjects\PictureView\PictureView\PictureView\obj\Debug\PictureView.csproj.GenerateResource.Cache
 C:\DevelopmentProjects\PictureView\PictureView\PictureView\bin\Debug\PictureView.exe.config
+C:\DevelopmentProjects\PictureView\PictureView\PictureView\bin\Debug\PictureView.exe
+C:\DevelopmentProjects\PictureView\PictureView\PictureView\bin\Debug\PictureView.pdb
+C:\DevelopmentProjects\PictureView\PictureView\PictureView\obj\Debug\PictureView.exe
+C:\DevelopmentProjects\PictureView\PictureView\PictureView\obj\Debug\PictureView.pdb
