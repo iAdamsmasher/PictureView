@@ -22,7 +22,6 @@ namespace PictureView
                     frmMn.progressBarUpDate(1);
                     if (pictureName.Contains(TrackId))
                         frmMn.comboBoxTrFailure.Items.Add(pictureName);
-
                 }
             }
             catch

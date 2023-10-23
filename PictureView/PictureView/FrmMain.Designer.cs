@@ -37,6 +37,8 @@
             this.textBoxDirectory = new System.Windows.Forms.TextBox();
             this.progressBarTrackId = new System.Windows.Forms.ProgressBar();
             this.labelPictureView = new System.Windows.Forms.Label();
+            this.labelDirectory = new System.Windows.Forms.Label();
+            this.labelDeveloper = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTrFailure)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.pictureBoxTrFailure.Image = global::PictureView.Properties.Resources.Default;
             this.pictureBoxTrFailure.Location = new System.Drawing.Point(12, 150);
             this.pictureBoxTrFailure.Name = "pictureBoxTrFailure";
-            this.pictureBoxTrFailure.Size = new System.Drawing.Size(1398, 574);
+            this.pictureBoxTrFailure.Size = new System.Drawing.Size(1398, 603);
             this.pictureBoxTrFailure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxTrFailure.TabIndex = 2;
             this.pictureBoxTrFailure.TabStop = false;
@@ -79,7 +81,7 @@
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(210, 24);
+            this.buttonSearch.Location = new System.Drawing.Point(204, 31);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(103, 40);
             this.buttonSearch.TabIndex = 4;
@@ -116,11 +118,36 @@
             this.labelPictureView.TabIndex = 7;
             this.labelPictureView.Text = "JOT Picture View";
             // 
+            // labelDirectory
+            // 
+            this.labelDirectory.AutoSize = true;
+            this.labelDirectory.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDirectory.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelDirectory.Location = new System.Drawing.Point(802, 93);
+            this.labelDirectory.Name = "labelDirectory";
+            this.labelDirectory.Size = new System.Drawing.Size(77, 23);
+            this.labelDirectory.TabIndex = 8;
+            this.labelDirectory.Text = "Directory";
+            // 
+            // labelDeveloper
+            // 
+            this.labelDeveloper.AutoSize = true;
+            this.labelDeveloper.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeveloper.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelDeveloper.Location = new System.Drawing.Point(1245, 1);
+            this.labelDeveloper.Name = "labelDeveloper";
+            this.labelDeveloper.Size = new System.Drawing.Size(165, 15);
+            this.labelDeveloper.TabIndex = 9;
+            this.labelDeveloper.Text = "Developed by Matheus.Paiva";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1422, 742);
+            this.ClientSize = new System.Drawing.Size(1422, 758);
+            this.Controls.Add(this.labelDeveloper);
+            this.Controls.Add(this.labelDirectory);
             this.Controls.Add(this.labelPictureView);
             this.Controls.Add(this.progressBarTrackId);
             this.Controls.Add(this.textBoxDirectory);
@@ -129,9 +156,11 @@
             this.Controls.Add(this.pictureBoxTrFailure);
             this.Controls.Add(this.labelTrackId);
             this.Controls.Add(this.textBoxTrackId);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ForeColor = System.Drawing.Color.Magenta;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PictureView";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTrFailure)).EndInit();
             this.ResumeLayout(false);
@@ -148,6 +177,8 @@
         public System.Windows.Forms.ProgressBar progressBarTrackId;
         public System.Windows.Forms.TextBox textBoxDirectory;
         private System.Windows.Forms.Label labelPictureView;
+        private System.Windows.Forms.Label labelDirectory;
+        private System.Windows.Forms.Label labelDeveloper;
     }
 }
 
